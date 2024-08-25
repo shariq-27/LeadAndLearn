@@ -1,46 +1,96 @@
-.size {
-    width: 6.5%;
-    height: auto;
-    max-inline-size: 100%;
-    block-size: auto;
+/* Headers/Navigation: Deep Blue (#2C3E50)
+Buttons/Links: Sunset Orange (#E67E22) with Coral Pink (#E74C3C) for hover states.
+Backgrounds: Off-White (#ECF0F1) with accents of Sand Beige (#F1C40F).
+Icons/Highlights: Forest Green (#27AE60) and Light Sky Blue (#3498DB).
+Text: Dark Charcoal (#34495E) for readability on lighter backgrounds. 
+Travel icon colors : 022874, 646afd
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.s-nav-size {
-    margin-left: 15%;
+nav {
+    padding: 3px 3px;
 }
 
-.navbar-collapse {
-    justify-content: flex-end;
-}
-
-.logo-container {
-    width: 100%;
-    max-width: 200px;
-    /* Maximum width */
-}
-
-.logo {
-    width: 8vw;
-    height: auto;
-    /* Maintain aspect ratio */
+#nav-start {
+    margin-left: 1em;
 }
 
 .logo {
-    width: 120px;
-    /* Default size */
-    height: auto;
+    mix-blend-mode: darken;
 }
 
-@media (max-width: 768px) {
-    .logo {
-        width: 100px;
-        /* Smaller screens */
-    }
+#travel {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    /* Adjust the size as needed */
+    color: #E67E22;
+}
+#stories{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    /* Adjust the size as needed */
+    color: #003ebb;
 }
 
-@media (max-width: 480px) {
-    .logo {
-        width: 80px;
-        /* Even smaller screens */
-    }
+/* .btn-custom{
+    padding: 6px 12px;
+} */
+
+/* Styles for the Sign In and Sign Up buttons */
+form .Mybtn a {
+    color: #3a3a3a;
+    display: inline-block;
+    /*padding: 4px 8px;  Adjust padding as needed */
+    text-decoration: none;
+     /* You can adjust the color if needed */
+    /* font-family: 'Playfair Display', serif; */
+    font-weight: 400;
+    font-size: 1rem; /* Adjust the size as needed */
+}
+
+form .Mybtn1 {
+    background-color: #ECF0F1; /* Sunset Orange */
+    border: none;
+    /* margin-left: 10px; */
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+form .Mybtn1:hover {
+    background-color: #3a3a3a; /* Coral Pink on hover */
+}
+form .Mybtn1:hover a{
+    color: #ECF0F1;
+}
+/* button 2 */
+form .Mybtn2 a{
+    color: #000;
+}
+form .Mybtn2 {
+    background-color: #3498DB; /* Sunset Orange */
+    border: none;
+    margin-left: 10px;
+    color: #3a3a3a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+form .Mybtn2:hover {
+    background-color: #000; /* Coral Pink on hover */
+}
+form .Mybtn2:hover a{
+    color: #fff;
+}
+
+form .Mybtn:first-of-type {
+    margin-left: 0; /* Ensure the first button doesn’t have extra left margin */
 }

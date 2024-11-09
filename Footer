@@ -1,0 +1,134 @@
+HTML
+
+<footer class="footer">
+    <div class="container">
+        <div class="row text-md-left">
+            <!-- Contact Information -->
+            <div class="col-md-3 col-12 mb-4">
+                <h5>Headquarters</h5>
+                <p>Panvel Branch<br>Lead and Learn Foundation,<br>Shop 8,9,10,11, 1st floor, Omkar Arcade, Opp. Panvel Railway station, Navi Mumbai 410206</p>
+                <p><strong>Phone:</strong> +91 8657076759 / 9819549857</p>
+                <p><strong>Email:</strong> leadandlearnfoundation@gmail.com</p>
+            </div>
+            <!-- About Section -->
+            <div class="col-md-3 col-12 mb-4">
+                <h5>About Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Founder's Story</a></li>
+                    <li><a href="#">Leadership behind LLF</a></li>
+                    <li><a href="#">Supporters</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            <!-- Services Section -->
+            <div class="col-md-3 col-12 mb-4">
+                <h5>Our Programmes</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Pre-School and Schools</a></li>
+                    <li><a href="#">Adult Skills</a></li>
+                    <li><a href="#">Adults</a></li>
+                </ul>
+                <br>
+                <h5>Our Impact</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+            <!-- Impact and Join Us -->
+            <div class="col-md-3 col-12 mb-4 text-center">
+                <h5>Join the Change</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Volunteer with Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">CSR</a></li>
+                </ul>
+                <br>
+                <img src="/img/LEAD AND LEARN .png" alt="Lead and Learn Logo" width="133px" style="border-radius: 10px;">
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom text-center mt-3">
+        <p>&copy; 2024 Lead and Learn Foundation. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+CSS
+
+
+/* Footer CSS */
+
+.footer {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 30px 0;
+}
+.footer h5 {
+    color: #ffc107;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.footer a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #ffc107;
+}
+.social-icons a {
+    margin: 0 10px;
+    color: #f5f5f5;
+    font-size: 18px;
+}
+.social-icons a:hover {
+    color: #ffc107;
+}
+.contact-form input {
+    border-radius: 0;
+    border: 1px solid #ccc;
+}
+.btn-subscribe {
+    background-color: #ffc107;
+    border: none;
+    color: #333;
+}
+.btn-subscribe:hover {
+    background-color: #e6ac00;
+}
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+
+.footer {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 30px 0;
+}
+.footer h5 {
+    color: #ffc107;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.footer a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #ffc107;
+}
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+/* Center content on mobile */
+@media (max-width: 767.98px) {
+    .footer .text-md-left {
+        text-align: center;
+    }
+}

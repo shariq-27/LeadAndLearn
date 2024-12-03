@@ -36,7 +36,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet"> -->
     <!-- css file -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
@@ -95,8 +95,8 @@
                             Impact
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/impact1.html">Success Stories</a></li>
-                            <li><a class="dropdown-item" href="/partner.html">Partners</a></li>
+                            <li><a class="dropdown-item" href="#">Success Stories</a></li>
+                            <li><a class="dropdown-item" href="#">Partners</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -105,17 +105,17 @@
                             Get Involved
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/volunteer.html">Volunteer With Us</a></li>
-                            <li><a class="dropdown-item" href="/csr.html">CSR</a></li>
+                            <li><a class="dropdown-item" href="#">Volunteer With Us</a></li>
+                            <li><a class="dropdown-item" href="#">CSR</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-color" aria-current="page" href="/contact.html">Contact</a>
+                        <a class="nav-link nav-link-color" aria-current="page" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-color"
                             style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;" aria-current="page"
-                            href="/gallery.html">Gallery</a>
+                            href="#">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#"><button type="button"

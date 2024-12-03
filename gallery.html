@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Lead and Learn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+        }
+
+        .gallery-container {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .gallery-title {
+            font-size: 2.5rem;
+            color: #333333;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 35px;
+            padding: 0 15px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            background-color: #fff;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item img:hover {
+            opacity: 0.9;
+        }
+
+        .gallery-item-title {
+            background-color: #333333;
+            color: #FFA500;
+            font-size: 1.1rem;
+            padding: 10px;
+
+            body {
+            font-family: Arial, sans-serif;
+        }
+
+        .gallery-container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .gallery {
+            flex: 3;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 10px);
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .quick-links {
+            flex: 1;
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-links h3 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .quick-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .quick-links ul li {
+            margin: 8px 0;
+        }
+
+        .quick-links ul li a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .quick-links ul li a:hover {
+            color: #0073e6;
+        }
+
+        .filter-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .filter-bar button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #0073e6;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .filter-bar button:hover {
+            background-color: #005bb5;
+        }
+
+        .gallery-section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .event {
+            flex: 3;
+            margin: 20px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .quick-links {
+            flex: 1;
+            margin: 20px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .quick-links h3 {
+            margin-bottom: 10px;
+        }
+
+        .quick-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-links ul li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .gallery-item img{
+            aspect-ratio: 1/1;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+    <!-- Filter Section -->
+    <section class="filter-bar">
+        <button onclick="filterGallery('all')">All</button>
+        <button onclick="filterGallery('event')">Events</button>
+        <button onclick="filterGallery('campaign')">Campaigns</button>
+        <button onclick="filterGallery('workshop')">Workshops</button>
+    </section>
+
+    <!-- Gallery Section 
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item" data-category="event">
+                <img src="images/career/img1.jpg" alt="Event 1">
+            </div>
+            <div class="gallery-item" data-category="campaign">
+                <img src="images/career/img2.jpg" alt="Campaign 1">
+            </div>
+            <div class="gallery-item" data-category="workshop">
+                <img src="images/career/img3.jpg" alt="Workshop 1">
+            </div>
+            <div class="gallery-item" data-category="workshop">
+                <img src="images/first-aid/img2.jpg" alt="Workshop 1">
+            </div>
+            <div class="gallery-item" data-category="workshop">
+                <img src="images/first-aid/img3.jpg" alt="Workshop 1">
+            </div>
+            
+        </div>-->
+
+        <!-- Quick Gallery Links -->
+        <aside class="quick-links">
+            <h3>Quick Gallery Links</h3>
+            <ul>
+                <li><a href="#">Job Fair at Bandra HO</a></li>
+                <li><a href="#">Women's Day Celebration</a></li>
+                <li><a href="#">Youth Skills Summit</a></li>
+                <li><a href="#">3rd International Summit</a></li>
+                <li><a href="#">Community Camps</a></li>
+                
+            </ul>
+        </aside>
+    </div>
+
+    
+
+
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+
+
+
+
+
+    <div class="gallery-container container container-fluid">
+        <h1 class="gallery-title">Gallery</h1>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0032.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0033.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0034.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0035.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0036.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0037.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0038.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0039.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0040.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0041.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0042.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0043.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0044.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0045.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0046.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0047.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0048.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0049.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0050.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0051.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0052.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0053.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0054.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0055.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0056.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0057.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0058.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0059.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0060.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0061.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0062.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0063.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0064.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0065.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0066.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0067.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0068.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0069.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0070.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0071.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0072.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0073.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0074.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0075.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0076.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0077.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0078.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0079.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0080.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0081.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0082.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0083.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0084.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0085.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0086.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0087.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-title">Award Ceremony</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0088.jpg"alt="Gallery Image 2">
+                <div class="gallery-item-title">Community Event</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0089.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0090.jpg" alt="Gallery Image 4">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/images/galler_extra/IMG-20241103-WA0091.jpg" alt="Gallery Image 5">
+                <div class="gallery-item-title">Training Workshop</div>
+            </div>
+            <!-- Add more images similarly -->
+        </div>
+    </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
